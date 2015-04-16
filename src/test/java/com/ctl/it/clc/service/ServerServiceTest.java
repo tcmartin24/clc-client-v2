@@ -44,11 +44,6 @@ public class ServerServiceTest extends IntegrationTests {
         server = service.getServer(creds, "VA1TCSBPATCH02");
         int endSnapshotCount = server.getDetails().getSnapshots().size();
 
-//        for (ServerOperation op : serverOps) {
-//            System.out.println(op.getServer());
-//            System.out.println(op.isQueued());
-//            System.out.println("---------------------------");
-//        }
         assertEquals(startSnapshotCount + 1, endSnapshotCount);
     }
 
