@@ -14,8 +14,7 @@ public class AuthServiceImpl implements AuthService {
     @Autowired
     private RestTemplate restTemplate;
 
-    @Value("${clc.authservice.url}")
-    private String clcAuthServiceUrl;
+    private String clcAuthServiceUrl="https://api.ctl.io/v2/authentication/login";
 
     @Override
     public LoginResponse login(String username, String password) {

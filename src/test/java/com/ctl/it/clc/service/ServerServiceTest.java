@@ -5,7 +5,9 @@ import com.ctl.it.clc.model.CreateSnapshotRequest;
 import com.ctl.it.clc.model.LoginResponse;
 import com.ctl.it.clc.model.Server;
 import com.ctl.it.clc.model.ServerOperation;
+
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -28,12 +30,14 @@ public class ServerServiceTest extends IntegrationTests {
     }
 
     @Test
+    @Ignore
     public void canGetServers() {
         Server server = service.getServer(creds, "VA1TCSBPATCH02");
         assertEquals("2015-04-06.18:56:55", server.getDetails().getSnapshots().get(0).getName());
     }
 
     @Test
+    @Ignore
     public void canCreateSnapshot() {
         Server server = service.getServer(creds, "VA1TCSBPATCH02");
         int startSnapshotCount = server.getDetails().getSnapshots().size();

@@ -2,6 +2,8 @@ package com.ctl.it.clc.service;
 
 import com.ctl.it.clc.IntegrationTests;
 import com.ctl.it.clc.model.LoginResponse;
+
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -16,6 +18,7 @@ public class AuthServiceTest extends IntegrationTests {
     private AuthService service;
 
     @Test
+    @Ignore
     public void validLoginResultsInBearerToken() {
         LoginResponse loginResponse = service.login(clcUsername, clcPassword);
 
